@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+body {
+  background-color: #111111;
+  font: 9.0em/1 PT Sans Narrow;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+svg {
+  width: 100svw;
+  height: 100svh;
+}
+
+#texto {
+  fill: transparent;
+}
+
+.texto {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  animation: stroke 10s infinite linear;
+  &:nth-child(2) {
+    stroke: #e53935;
+    animation-delay: -2s;
+  }
+  &:nth-child(3) {
+    stroke: #8e24aa;
+    animation-delay: -4s;
+  }
+  &:nth-child(4) {
+    stroke: #3f51b5;
+    animation-delay: -6s;
+  }
+  &:nth-child(5) {
+    stroke: #00897b;
+    animation-delay: -8s;
+  }
+  &:nth-child(6) {
+    stroke: #fdd835;
+    animation-delay: -10s;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
